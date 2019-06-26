@@ -1,0 +1,91 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1><RP></RP>Order Search result</h1>
+
+  <table border = 1>
+
+    <tr>
+      <th> Restaurant </th>
+      <td> {{ res_name }} </td>
+    </tr>
+
+    <tr>
+      <th> User id </th>
+      <td> {{ uid }} </td>
+    </tr>
+
+    <tr>
+      <th> User name </th>
+      <td> {{ user_name }} </td>
+    </tr>
+
+    <tr>
+      <th> Delivery address </th>
+      <td> {{ o_add }} </td>
+    </tr>
+
+    <tr>
+      <th> Name </th>
+      <td> {{ o_name }} </td>
+    </tr>
+
+    <tr>
+      <th> Phone number </th>
+      <td> {{ o_phone }} </td>
+    </tr>
+
+    <tr>
+      <th> Tip </th>
+      <td> {{ tip }} </td>
+    </tr>
+
+    <tr>
+      <th> Payment method </th>
+      <td> {{ payment }} </td>
+    </tr>
+
+    <tr>
+      <th> Order id </th>
+      <td> {{ oid }} </td>
+    </tr>
+
+    <tr>
+      <th> Payment method </th>
+      <td> {{ payment }} </td>
+    </tr>
+
+    <tr>
+      <th> Delivery guy </th>
+      <td> {{ dg_name }} </td>
+    </tr>
+
+    <tr>
+      <th> Delivery guy phone number </th>
+      <td> {{ dg_phone }} </td>
+    </tr>
+
+    <tr>
+      <th> Total price </th>
+      <td> {{ total }} </td>
+    </tr>
+
+  </table>
+
+<p><a href="/">Go back</a></p>
+
+<form method="POST" action="/search_order">
+<p>Order id: <input type="text" name="name"> <input type="submit" value="Search Order"></p>
+</form>
+
+</body>
+
+
+</html>

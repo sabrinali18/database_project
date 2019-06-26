@@ -1,0 +1,55 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1><RP></RP>Reservation Search result</h1>
+
+  <table border = 1>
+    <tr>
+      <th>Reservation id</th>
+      <td> {{ reid }} </td>
+    </tr>
+
+    <tr>
+      <th>Reservation time</th>
+      <td> {{ reserve_time }} </td>
+    </tr>
+
+    <tr>
+      <th>Number of guests</th>
+      <td> {{ no_guests }} </td>
+    </tr>
+
+    <tr>
+      <th>Restaurant id</th>
+      <td> {{ rid }} </td>
+    </tr>
+
+    <tr>
+      <th>User id</th>
+      <td> {{ uid }} </td>
+    </tr>
+
+    <tr>
+      <th>User name</th>
+      <td> {{ user_name }} </td>
+    </tr>
+
+  </table>
+
+<p><a href="/">Go back</a></p>
+
+<form method="POST" action="/search_reservation">
+<p>Reservation id: <input type="text" name="name"> <input type="submit" value="Search"></p>
+</form>
+
+</body>
+
+
+</html>

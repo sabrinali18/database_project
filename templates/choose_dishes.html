@@ -1,0 +1,84 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th, td {
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #EEE8AA;
+      color: #9E9B74;
+    }
+  </style>
+
+
+<body>
+  
+
+<!--<p><a href="/another">Go to the other page</a></p> -->
+
+<h3>Order online </h3>
+<div>
+<p> Choose dishes </p>
+
+<form method="POST" action='/order_summary'>
+  <select name="rid"><option value="{{rid}}"> {{res_name}} </option></select>
+  <div>
+  <table style="width:70%">
+        
+  <tr>
+    <th style="padding: 1em">Dish</th>
+    <th style="padding: 1em">Price</th>
+    <th style="padding: 1em">Quantity(between 0 and 20, int only)</th>
+  </tr>
+
+  {% for n in dishes_price%}
+  <tr>
+    <td style="text-align:center">{{n[0]}}</td>
+    <td style="text-align:center">{{n[1]}}</td>
+
+    <td style="text-align:center">
+    Quantity:
+    <input type="number" name="{{n[0]}}" value="0" min="0" max="20" step="1" required>
+     </td>
+  </tr>
+  {% endfor %}
+
+  </table>
+  </div>
+
+  <p>Delivery address: <input type="text" name="o_add" required> </p>
+  <p>Name: <input type="text" name="o_name" required></p>
+  <p>User id (from 1 to {{max_uid}}): <input type="number" name="uid" min="1" max="{{max_uid}}" step="1" required></p>
+  <p>Phone number (of length 10): <input type="number" name="o_phone" min="1000000000" max="9999999999" step="1" required></p>
+  <p>Tip (int only): <input type="number" name="tip" min="0" step="1" required></p>
+  <p>Payment method:  <select name='payment'>
+      <option value="Cash"> Cash </option>
+      <option value="Credit Card"> Credit Card </option>
+      <option value="Paypal"> Paypal </option>
+    </select></p>
+
+    
+  </div>
+
+
+<input type="submit" value="Finish order"></p>
+</form>
+
+<p><a href="/">Go back</a></p>
+
+</body>
+
+
+</html>

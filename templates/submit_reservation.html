@@ -1,0 +1,33 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Submit Reservation</h1>
+
+  <div>
+<form method="POST" action="/reservation_summary">
+<select name="rid">
+      {% for n in data%}
+      <option value="{{n[1]}}"> {{n[0]}} </option>
+      {% endfor %}
+    </select>
+<p>Time of reservation (e.g., 2019-3-18 17:30:00): <input type="text" name="time" required> </p>
+<p>Number of guests: <input type="number" name="num_guests" min="1" max="20" step="1" required> </p>
+<p>User id (from 1 to {{max_uid}}): <input type="number" name="userid" min="1" max="{{max_uid}}" step="1" required> </p>
+
+    <p><input type="submit" value="Submit"></p>
+</form>
+  </div>
+
+<p><a href="/">Go back</a></p>
+
+</body>
+
+
+</html>

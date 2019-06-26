@@ -1,0 +1,48 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  
+
+<!--<p><a href="/another">Go to the other page</a></p> -->
+
+<h3>Search for reservation</h3>
+
+<form method="POST" action="/search_reservation">
+<p>Reservation id: <input type="number" name="name" min="1" step="1" required> <input type="submit" value="Search Reservation"></p>
+</form>
+
+<h3>Search for order</h3>
+
+<form method="POST" action="/search_order">
+<p>Order id: <input type="number" name="name" min="1" step="1" required> <input type="submit" value="Search Order"></p>
+</form>
+
+<h3>Reserve online</h3>
+
+<form method="POST" action="/submit_reservation">
+<input type="submit" value="Reserve online "></p>
+</form>
+
+<h3>Order online</h3>
+
+<form method="POST" action="/submit_order">
+<input type="submit" value="Order online "></p>
+</form>
+
+<h3>Create new user</h3>
+
+<form method="POST" action="/user_create">
+<p>User name: <input type="text" name="name" required> <input type="submit" value="Create user"></p>
+</form>
+
+</body>
+
+
+</html>

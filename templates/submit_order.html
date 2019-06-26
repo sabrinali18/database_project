@@ -1,0 +1,39 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  
+
+<!--<p><a href="/another">Go to the other page</a></p> -->
+
+<h3>Order online </h3>
+<div>
+<p> Choose a restaurant </p>
+<form method="POST" action="/choose_dishes">
+    <select name='rid'>
+    	{% for n in restaurants%}
+    	<option value="{{n[0]}}"> {{n[1]}} </option>
+    	{% endfor %}
+
+    </select>
+
+   
+
+  </div>
+
+
+<input type="submit" value="Next step "></p>
+</form>
+
+<p><a href="/">Go back</a></p>
+
+</body>
+
+
+</html>
